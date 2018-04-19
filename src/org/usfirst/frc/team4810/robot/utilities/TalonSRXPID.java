@@ -30,9 +30,9 @@ public class TalonSRXPID
 
 	}
 
-	public double FtToEnc(double ft, double diam)
+	public double InToEnc(double in, double diam)
 	{
-		return 0.0;
+		return (in/(diam*3.14))*4096;
 	}
 
 	public boolean onTarget()
@@ -62,9 +62,9 @@ public class TalonSRXPID
 		this.maxLoopNumber = maxLoopNumber;
 	}
 
-	public void setPosSetpoint(int ticks)
+	public void setPosSetpoint(double setpoint)
 	{
-		talon.set(ControlMode.Position, ticks);
+		talon.set(ControlMode.Position, setpoint);
 	}
 
 	public void setVelSetpoint(int ticks)

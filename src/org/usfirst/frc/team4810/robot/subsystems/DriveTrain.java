@@ -23,7 +23,7 @@ public class DriveTrain extends Subsystem
 	TalonSRX rf, rm, rb, lf, lm, lb;
 
 	Drive drive;
-	TalonSRXPID rfPID, lfPID;
+	public TalonSRXPID rfPID, lfPID;
 	
 	AHRS navX = new AHRS(I2C.Port.kOnboard);
 
